@@ -1,0 +1,23 @@
+{
+  "name": "beautiful-jekyll",
+  "scripts": {
+    "build": "npm-run-all build:deps build:exec_install build:exec_build",
+    "build:deps": "bundle install",
+    "build:exec_install": "bundle exec appraisal install",
+    "build:exec_build": "bundle exec appraisal jekyll build --future",
+    "serve": "bundle exec appraisal jekyll serve --trace",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/lora": "5.0.19",
+    "@fontsource/open-sans": "5.0.30",
+    "@fortawesome/fontawesome-free": "6.5.2",
+    "bootstrap": "4.4.1",
+    "jquery": "3.5.1",
+    "popper.js": "1.16.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}

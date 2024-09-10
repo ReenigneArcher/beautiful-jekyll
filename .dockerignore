@@ -1,0 +1,5 @@
+# ignore hidden files
+.*
+
+node_modules/
+_site/
