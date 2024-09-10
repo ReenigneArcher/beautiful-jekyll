@@ -1,3 +1,6 @@
+# ignore JetBrains IDE files
+.idea/
+
 # project
 _site
 .sass-cache
