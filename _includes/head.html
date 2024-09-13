@@ -64,6 +64,17 @@
   {% include cloudflare_analytics.html %}
   {% include mathjax.html %}
 
+  {% if layout.common-ext-npm-css %}
+    {% for css in layout.common-ext-npm-css %}
+      {% assign version = css.ver | default: site.package_versions[css.dep] %}
+      {% if version %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/{{ css.dep }}@{{ version }}{{ css.path }}">
+      {% else %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/{{ css.dep }}{{ css.path }}">
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   {% if layout.common-ext-css %}
     {% for css in layout.common-ext-css %}
       {% include ext-css.html css=css %}

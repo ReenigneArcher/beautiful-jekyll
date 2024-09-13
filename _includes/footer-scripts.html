@@ -1,3 +1,14 @@
+{% if layout.common-ext-npm-js %}
+  {% for js in layout.common-ext-npm-js %}
+    {% assign version = js.ver | default: site.package_versions[js.dep] %}
+    {% if version %}
+      <script src="https://cdn.jsdelivr.net/npm/{{ js.dep }}@{{ version }}{{ js.path }}"></script>
+    {% else %}
+      <script src="https://cdn.jsdelivr.net/npm/{{ js.dep }}{{ js.path }}"></script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
 {% if layout.common-ext-js %}
   {% for js in layout.common-ext-js %}
     {% include ext-js.html js=js %}

@@ -1,11 +1,16 @@
 ---
 common-css:
-  - "/assets/vendor/css/bootstrap.min.css"
   - "/assets/css/beautifuljekyll-minimal.css"
-common-js:
-  - "/assets/vendor/js/bootstrap.min.js"
-  - "/assets/vendor/js/jquery.min.js"
-  - "/assets/vendor/js/popper.min.js"
+common-ext-npm-css:
+  - dep: bootstrap
+    path: "/dist/css/bootstrap.min.css"
+common-ext-npm-js:
+  - dep: bootstrap
+    path: "/dist/js/bootstrap.min.js"
+  - dep: jquery
+    path: "/dist/jquery.min.js"
+  - dep: "popper.js"
+    path: "/dist/umd/popper.min.js"
 ---
 
 <!DOCTYPE html>
