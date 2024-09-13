@@ -272,16 +272,6 @@ npm_hook:
   # npm_dependencies:
   #   - "@lizardbyte/shared-web@latest"
   copy_files:
-    - src: "bootstrap/dist/css/bootstrap.min.css"
-      dst: "assets/vendor/css/bootstrap.min.css"
-    - src: "bootstrap/dist/css/bootstrap.min.css.map"
-      dst: "assets/vendor/css/bootstrap.min.css.map"
-    - src: "bootstrap/dist/js/bootstrap.min.js"
-      dst: "assets/vendor/js/bootstrap.min.js"
-    - src: "jquery/dist/jquery.min.js"
-      dst: "assets/vendor/js/jquery.min.js"
-    - src: "popper.js/dist/umd/popper.min.js"
-      dst: "assets/vendor/js/popper.min.js"
     - src: "@fortawesome/fontawesome-free/css/all.min.css"
       dst: "assets/vendor/css/fontawesome.min.css"
   copy_dirs:
@@ -291,6 +281,10 @@ npm_hook:
       dst: "assets/vendor/fonts/lora"
     - src: "@fontsource/open-sans"
       dst: "assets/vendor/fonts/open-sans"
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
