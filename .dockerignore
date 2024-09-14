@@ -1,0 +1,6 @@
+# ignore hidden files
+.*
+
+_site/
+
+Gemfile.lock
